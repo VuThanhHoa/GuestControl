@@ -1,0 +1,21 @@
+.edit-form {
+    margin-top: 50px;
+}
+
+.label {
+    color: black;
+}
+
+.input {
+    color: black;
+}
+
+.h1 {
+    color: black;
+    text-align: center;
+}
+
+.form-group {
+    align-items: center;
+    margin-bottom: 10px;
+}

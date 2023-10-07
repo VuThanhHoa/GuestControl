@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"></link>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"></link>
+</head>
+<body>
+<h1>Chào mừng bạn quay trở lại với 29/3!</h1>
+<form method="POST" action="{{ url_for('update_form', id=latest_visit.ID) }}?latest_visit_id={{ latest_visit.ID }}">
+    <label for="phone_number">Số điện thoại:</label>
+    <input type="text" id="phone_number" name="phone_number" value="{{ latest_visit.SoDienThoai }}"><br>
+
+    <label for="vehicle_type">Loại phương tiện:</label>
+    <input type="text" id="vehicle_type" name="vehicle_type" value="{{ latest_visit.LoaiXe }}"><br>
+
+    <label for="vehicle_number">Biển số:</label>
+    <input type="text" id="vehicle_number" name="vehicle_number" value="{{ latest_visit.BienSoXe }}"><br>
+
+    <label for="company_name">Công ty:</label>
+    <input type="text" id="company_name" name="company_name" value="{{ latest_visit.CongTy }}"><br>
+
+    <label for="address">Địa chỉ:</label>
+    <input type="text" id="address" name="address" value="{{ latest_visit.DiaChi }}"><br>
+
+    <label for="department">Bộ phận cần gặp:</label>
+    <input type="text" id="department" name="department" value="{{ latest_visit.BPCanGap }}"><br>
+
+    <label for="who">Người cần gặp:</label>
+    <input type="text" id="who" name="who" value="{{ latest_visit.NguoiCanGap }}"><br>
+
+    <div class="form-group">
+        <label class="label">Hướng dẫn an toàn: </label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="instructions">
+            <label class="form-check-label" for="defaultCheck1">
+                Tôi đã được hướng dẫn và cam kết tuân thủ các quy định về An toàn lao động!
+            </label>
+        </div>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+</body>
+</html>

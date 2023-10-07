@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"></link>
+
+</head>
+<body>
+<h1 class="h1">Chào mừng bạn đến với 29/3! </h1>
+<h3 class="h1">Mời bạn nhập các thông tin sau: </h3>
+
+<form class="edit-form" method="post">
+    <div class="form-group">
+        <label class="label">Họ và tên: </label>
+        <input class="input" name="name"></input><br>
+    </div>
+
+    <div class="form-group">
+        <label class="label">Số điện thoại: </label>
+        <input class="input" name="phone_number"></input><br>
+    </div>
+
+    <div class="form-group">
+        <label class="label">Loại phương tiện: </label>
+        <input class="input" name="vehicle_type"
+               placeholder="Để trống nếu bạn di chuyển bằng phương tiện công cộng hoặc Đi bộ"></input><br>
+    </div>
+
+    <div class="form-group">
+        <label class="label">Biển số: </label>
+        <input class="input" name="vehicle_number"
+               placeholder="Để trống nếu bạn di chuyển bằng phương tiện công cộng hoặc Đi bộ"></input><br>
+    </div>
+
+    <div class="form-group">
+        <label class="label">Công ty: </label>
+        <input class="input" name="company_name" placeholder="Để trống nếu bạn không làm ở công ty nào"></input><br>
+    </div>
+
+    <div class="form-group">
+        <label class="label">Địa chỉ: </label>
+        <input class="input" name="address" placeholder="Ghi địa chỉ nhà riêng nếu bạn không làm ở công ty nào"></input><br>
+    </div>
+
+    <div class="form-group">
+        <select class="Bộ phận cần gặp" name = "department">
+            <option selected>Bộ phận cần gặp (Nếu ứng tuyển thì chọn Tổng Hợp)</option>
+            <option value="1">Tổng Hợp</option>
+            <option value="2">Kinh Doanh - Xuất Nhập Khẩu</option>
+            <option value="3">Kế Toán</option>
+            <option value="4">Quản Lý Chất Lượng</option>
+            <option value="5">Kỹ Thuật Công Nghệ</option>
+            <option value="6">Cơ Điện & Môi Trường</option>
+            <option value="7">Quản Trị Đời Sống</option>
+            <option value="8">Y Tế</option>
+            <option value="9">Ban Giám Đốc</option>
+        </select>
+    </div>
+
+    <div class="form-group" name = "who">
+        <label class="label">Người cần gặp: </label>
+        <input class="input" name="who"></input><br>
+    </div>
+
+    <div class="form-group">
+        <select class="Mục đích" name = "purpose">
+            <option selected>Mục đích</option>
+            <option value="1">Ứng tuyển</option>
+            <option value="2">Nhập hàng</option>
+            <option value="3">Xuất hàng</option>
+            <option value="5">Sửa/bảo trì máy móc</option>
+            <option value="4">Liên hệ công tác khác</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label class="label">Hướng dẫn an toàn: </label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="instructions">
+            <label class="form-check-label" for="defaultCheck1">
+                Tôi đã được hướng dẫn và cam kết tuân thủ các quy định về An toàn lao động!
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit">Mời bạn quét QR Code...</button>
+    </div>
+
+</form>
+</body>
+</html>
